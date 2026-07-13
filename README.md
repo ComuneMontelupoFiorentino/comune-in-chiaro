@@ -19,6 +19,8 @@ views/             partial PHP (header, footer, error page, testata servizio)
 
 `PHP >= 8.1`
 
+`CKAN >= 2.10`
+
 ## Configurazione
 
 `config/config.php` (da copiare/valorizzare per la propria installazione):
