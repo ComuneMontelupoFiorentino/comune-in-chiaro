@@ -1,0 +1,44 @@
+[
+    {
+        "id": "test",
+        "type": "service",
+        "title": "Test ",
+        "icona": "it-calendar",
+        "desc": "Ecco un test.",
+        "link": "?service=test&map=true&breadCrumb=true",
+        "new": true,
+        "allowEmbed": true,
+        "tags": [
+            "Manutenzioni",
+            "Interventi",
+            "Programmazione",
+            "Verde Pubblico"
+        ],
+        "datasets": [
+            {
+                "nameDataset": "Dataset1",
+                "alias": "test1",
+                "url": "https://exemple.it/test1",
+                "cache": true,
+                "recordsPath": "",
+                "groupKeyField": "",
+                "groupCountField": "totale",
+                "fetch": "https://exemple.it/test1"
+            }
+        ],
+        "alert": [
+            {
+                "typeAlert": "warning",
+                "text": "Messaggio di warming."
+            }
+        ],
+        "descriptiion": [
+            {
+                "p": "Inizio della descrizione."
+            },
+            {
+                "p": "Ecco un'altra riga.."
+            }
+        ]
+    }
+]
