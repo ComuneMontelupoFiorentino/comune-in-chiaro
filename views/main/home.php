@@ -8,7 +8,7 @@
                     <nav class="breadcrumb-container" aria-label="breadcrumb">
                         <ol class="breadcrumb p-0">
                             <li class="breadcrumb-item trail-begin">
-                                <a href="<?= BASE_URL ?>">Home</a>
+                                <a href="<?= BASE_URL ?>" title="home">Home</a>
                             </li>
                             <li class="breadcrumb-item active">
                                 <span class="separator">/
