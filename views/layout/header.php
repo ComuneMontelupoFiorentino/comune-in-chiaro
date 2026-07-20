@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="index,follow">
-    <title><?= NAME_SERVICE ?></title>    
+    <title><?= NAME_SERVICE ?> | <?= ENTE ?></title>
     <meta name="description" content="Comune in Chiaro è il portale che consente di consultare servizi e informazioni basati sugli opendata comunali">
 
     <!-- Favicons -->
@@ -30,7 +30,8 @@
 
     <!-- Classi css -->
     <link rel="stylesheet" href="assets/dist/css/bootstrap-italia.min.css">
-    <link rel="stylesheet" href="assets/dist/css/custom.css?v=64">
+    <link rel="stylesheet" href="assets/dist/css/bootstrap-italia.min.css.map">
+    <link rel="stylesheet" href="assets/dist/css/custom.css?v=66">
 
     <?php
     // controllo se includere css per skeleton-loader
@@ -86,7 +87,7 @@
                                 </button>
                                 
                                 <div class="it-brand-wrapper">
-                                    <a href="<?= BASE_URL ?>" class="d-flex align-items-center text-decoration-none">
+                                    <a href="<?= BASE_URL ?>" class="d-flex align-items-center text-decoration-none" title="<?= ENTE ?>">
                                         <div class="me-2 flex-shrink-0" style="height:64px;">
                                             <img src="<?= BASE_URL ?>assets/dist/logo.png" alt="<?= NAME_SERVICE ?>" class="h-100 img-brand" style="object-fit:contain;">
                                         </div>
@@ -135,17 +136,17 @@
                                 </button>
                             </div>
                             <div class="menu-wrapper">
-                                <a class="logo-hamburger d-lg-none" href="https://www.comune.montelupo-fiorentino.fi.it">
+                                <a class="logo-hamburger d-lg-none" href="https://www.comune.montelupo-fiorentino.fi.it" title="menu">
                                     <div class="it-brand-text">
                                         <div class="it-brand-title-custom"><?= ENTE ?></div>
                                     </div>
                                 </a>
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link <?= isActiveMain('home', $main) ?>" href="<?= BASE_URL ?>" aria-current="page"><span>Home</span></a>
+                                        <a class="nav-link <?= isActiveMain('home', $main) ?>" href="<?= BASE_URL ?>" aria-current="page" title="Home"><span>Home</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link <?= isActiveMain('about', $main) ?>" href="<?= BASE_URL ?>?main=about"><span>Cos'è</span></a>
+                                        <a class="nav-link <?= isActiveMain('about', $main) ?>" href="<?= BASE_URL ?>?main=about" title="Cos'è"><span>Cos'è</span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -198,4 +199,4 @@
 
     <?php } ?>
 
-    <div id="service-head" data-service="<?= htmlspecialchars($service ?? '') ?>" data-url="<?= htmlspecialchars($servicesUrl) ?>"></div>
+    <div id="service-head" data-service="<?= htmlspecialchars($serviceAllowed ?? '') ?>" data-url="<?= htmlspecialchars($servicesUrl) ?>"></div>
