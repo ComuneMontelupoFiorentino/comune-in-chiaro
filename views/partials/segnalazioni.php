@@ -8,7 +8,7 @@
                         <h2 class="title-medium-2-semi-bold mb-0">Problemi?</h2>
                         <ul class="contact-list p-0">
                             <li>
-                                <a class="list-item" type="button" href="https://www.comune.montelupo-fiorentino.fi.it/home/segnalazione-disservizio/" target= “_blank”>
+                                <a class="list-item" type="button" href="https://www.comune.montelupo-fiorentino.fi.it/home/segnalazione-disservizio/" title="segnala un disservizio" target= “_blank”>
                                     <svg class="icon"><use href="assets/dist/svg/sprites.svg#it-map-marker-circle"></use></svg>
                                     <span class="span-custom">Segnala un disservizio</span>
                                 </a>
