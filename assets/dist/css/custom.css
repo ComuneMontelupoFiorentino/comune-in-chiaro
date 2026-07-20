@@ -79,7 +79,7 @@ blockquote {
 
 .text-muted {
     --bs-text-opacity: 1;
-    color: hsl(210, 17%, 44%) !important;
+    color: #00445f !important;
 }
 
 /* ICONE — i tre blocchi .icon dell'originale sono qui unificati.
@@ -439,7 +439,7 @@ a.read-more {
 }
 
 .btn-calendar-costum {
-    color: gray !important;
+    color: #18556e !important;
     font-weight: 400;
 }
 
@@ -868,7 +868,7 @@ a.read-more .icon {
 } 
 
 .text-muted-costum {
-    color: hsl(0, 0%, 20.4%) !important;
+    color: #00445f !important;
 } 
 
 .read-more-costum {
@@ -907,7 +907,7 @@ a.read-more .icon {
 /* Badge +X cliccabile */
 .badge-more {
   background-color: #e2e8f0;
-  color: #64748b;
+  color: #00445f;
   font-weight: bold;
   cursor: pointer;
 }
