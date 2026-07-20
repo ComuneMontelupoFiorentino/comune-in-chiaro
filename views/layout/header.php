@@ -164,7 +164,7 @@
             <div class="modal-content">
                 
                 <div class="modal-header">
-                    <h2 class="modal-title h5" id="modalrightTitle">Cerca servizio</h2>
+                    <p class="modal-title h5" id="modalrightTitle">Cerca servizio</p>
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
                         <svg class="icon"><use href="assets/dist/svg/sprites.svg#it-close"></use></svg>
                     </button>
