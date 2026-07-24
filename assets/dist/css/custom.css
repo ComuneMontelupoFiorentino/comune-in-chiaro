@@ -197,7 +197,9 @@ header-block-brand {
   color: var(--bs-primary-hover-custom) !important;
 }
 
-
+.it-header-center-wrapper .it-header-center-content-wrapper .it-brand-wrapper a {
+  color: var(--bs-primary-custom);
+}
 /* =====================================================================
    HERO
    ===================================================================== */
@@ -738,6 +740,7 @@ blockquote.blockquote-card,
         padding: 5px;
     }
 }
+
 
 @media (max-width: 992px) {
     .it-header-navbar-wrapper.theme-dark-mobile .navbar .navbar-collapsable .menu-wrapper {
