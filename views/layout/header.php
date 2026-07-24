@@ -94,10 +94,10 @@
                                         <div>
                                             <div class="d-none d-md-block header-block-brand" >
                                                 <div class="it-brand-title"><?= NAME_SERVICE ?></div>
-                                                <div class="it-brand-tagline" style="color: white;"><?= DESC_SERVICE ?></div>
+                                                <div class="it-brand-tagline" ><?= DESC_SERVICE ?></div>
                                             </div>
                                             <div class="d-block d-md-none">
-                                                <div class="it-brand-title" style="color: white; font-size: 20px; line-height: 1.1;">
+                                                <div class="it-brand-title" style="font-size: 20px; line-height: 1.1;">
                                                     <?= NAME_SERVICE_SH ?>
                                                 </div>
                                             </div>
