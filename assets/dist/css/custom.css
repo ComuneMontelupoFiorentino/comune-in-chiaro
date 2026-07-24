@@ -184,7 +184,7 @@ blockquote {
 }
 
 .it-header-center-content-wrapper .navbar-toggler.burger-menu .icon {
-    fill: var(--bs-white) !important;
+    fill: var(--bs-primary-custom) !important;
     width: 32px;
     height: 32px;
 }
