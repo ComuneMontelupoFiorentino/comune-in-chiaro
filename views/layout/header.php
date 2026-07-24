@@ -31,7 +31,7 @@
     <!-- Classi css -->
     <link rel="stylesheet" href="assets/dist/css/bootstrap-italia.min.css">
     <link rel="stylesheet" href="assets/dist/css/bootstrap-italia.min.css.map">
-    <link rel="stylesheet" href="assets/dist/css/custom.css?v=66">
+    <link rel="stylesheet" href="assets/dist/css/custom.css?v=68">
 
     <?php
     // controllo se includere css per skeleton-loader
@@ -92,7 +92,7 @@
                                             <img src="<?= BASE_URL ?>assets/dist/logo.png" alt="<?= NAME_SERVICE ?>" class="h-100 img-brand" style="object-fit:contain;">
                                         </div>
                                         <div>
-                                            <div class="d-none d-md-block" style="color: white;">
+                                            <div class="d-none d-md-block header-block-brand" >
                                                 <div class="it-brand-title"><?= NAME_SERVICE ?></div>
                                                 <div class="it-brand-tagline" style="color: white;"><?= DESC_SERVICE ?></div>
                                             </div>
@@ -108,7 +108,7 @@
                                 <?php if ($main === 'home') { ?>
                                 
                                 <button class="search-link rounded-icon" data-bs-toggle="modal" data-bs-target="#search-modal" aria-label="Cerca servizio">
-                                    <svg class="icon"><use href="assets/dist/svg/sprites.svg#it-search"></use></svg>
+                                    <svg class="icon icon-search-home"><use href="assets/dist/svg/sprites.svg#it-search"></use></svg>
                                 </button>
 
                                 <?php } ?>
