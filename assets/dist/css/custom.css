@@ -138,7 +138,8 @@ blockquote {
    HEADER
    ===================================================================== */
 .it-header-slim-wrapper {
-    background-color: var(--bs-primary-hover-custom) !important;
+   background-color: #fff !important;
+   border-bottom: 1px solid rgba(128, 128, 128, 0.2);
 }
 
 .it-header-center-wrapper {
@@ -146,7 +147,8 @@ blockquote {
 }
 
 .custom-header-small {
-    background-color: var(--bs-primary-custom) !important;
+    background-color: #fff !important;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
 }
 
 .it-header-center-wrapper .it-header-center-content-wrapper .it-brand-wrapper a .icon {
@@ -185,6 +187,14 @@ blockquote {
     fill: var(--bs-white) !important;
     width: 32px;
     height: 32px;
+}
+
+header-block-brand {
+	color: var(--bs-primary-custom);
+}
+
+.it-header-slim-wrapper .it-header-slim-wrapper-content .navbar-brand {
+  color: var(--bs-primary-hover-custom) !important;
 }
 
 
@@ -441,6 +451,10 @@ a.read-more {
 .btn-calendar-costum {
     color: #18556e !important;
     font-weight: 400;
+}
+
+.icon-search-home {
+  fill: white;
 }
 
 
@@ -720,7 +734,7 @@ blockquote.blockquote-card,
 @media (min-width: 992px) {
     .navbar-collapse,
     .it-header-navbar-wrapper {
-        background-color: var(--bs-primary);
+        background-color: white;
         padding: 5px;
     }
 }
@@ -921,7 +935,7 @@ a.read-more .icon {
     aspect-ratio: 1 / 1;    
     flex-shrink: 0;         
     border-radius: 50%;     
-    background: #fff;
+    background: var(--bs-primary-custom);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -952,3 +966,4 @@ mark.search-hl {
 .img-brand {
     width: 48px !important;
 } 
+
