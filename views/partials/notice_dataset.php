@@ -10,13 +10,13 @@
                             <span class="visually-hidden">Note</span>
                             <span class="text">Note sui dati</span>
                         </div>
-                        <span>Tutti i dataset usati in questo servizio sono consultabili e scaricabili in formato aperto sul 
+                        <span>Tutti i dataset usati sono consultabili e scaricabili in formato aperto sul 
                             <a href="https://dati.toscana.it/organization/comune-di-montelupo-fiorentino" target="_blank" title="Vai a portale opendata">PORTALE OPENDATA<svg class="icon icon-primary icon-sm"><use href="assets/dist/svg/sprites.svg#it-external-link"></use></svg></a>
                         </span><br><br><br>
                         <ul>
                             <li>
                                 <a class="list-item read-more" href="#" role="button" data-bs-toggle="modal" data-bs-target="#modalDataset" title="Elenco dataset usati">
-                                    <span class="span-custom read-more">Elenco dei Dataset usati in questo servizio
+                                    <span class="span-custom read-more">Elenco dei Dataset usati
                                         <svg class="icon icon-sm icon-primary ms-1 mb-1"><use href="assets/dist/svg/sprites.svg#it-chart-line"></use></svg>
                                     </span>
                                 </a>
