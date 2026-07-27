@@ -31,7 +31,7 @@
     <!-- Classi css -->
     <link rel="stylesheet" href="assets/dist/css/bootstrap-italia.min.css">
     <link rel="stylesheet" href="assets/dist/css/bootstrap-italia.min.css.map">
-    <link rel="stylesheet" href="assets/dist/css/custom.css?v=68">
+    <link rel="stylesheet" href="assets/dist/css/comune-in-chiaro.css?v=1">
 
     <?php
     // controllo se includere css per skeleton-loader
