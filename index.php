@@ -22,6 +22,8 @@ $nonce = base64_encode(random_bytes(16));
  */
 
 define('ROOT', __DIR__);
+// var_dump(ROOT);
+// die();
 
 /**
  *  =========================
@@ -215,7 +217,7 @@ if (is_dir($mainDir)) {
  * SERVICE WHITELIST
  *  =========================
  */
-$serviceDir = ROOT . '/views/service';
+$serviceDir = ROOT . '/views/services/services';
 $servicePages = [];
 
 if (is_dir($serviceDir)) {
@@ -231,7 +233,7 @@ $isServiceValid = ($service !== '' && in_array($service, $servicePages, true));
  * SHEET WHITELIST
  *  =========================
  */
-$sheetDir = ROOT . '/views/sheet';
+$sheetDir = ROOT . '/views/services/sheets';
 $sheetPages = [];
 
 if (is_dir($sheetDir)) {
@@ -422,13 +424,24 @@ sendSecurityPolicyHeaders($nonce, $frameAncestors, $xFrameOptions, $cspImgSrcExt
  * =========================
  */
 
-if ($isServiceValid) {
+// Tra service e sheet vince service
+$serviceAllowed = null;
 
-    $serviceFile = ROOT . "/views/service/{$service}.php";
+if ($isServiceValid) {
+    $serviceAllowed = $service;
+    $folder = "services";
+} elseif ($isSheetValid) {
+    $serviceAllowed = $sheet;
+    $folder = "sheets";
+}
+
+$servicePage = ROOT . "/views/services/{$folder}/{$serviceAllowed}.php";
+
+if ($isServiceValid) {
 
     require ROOT . '/views/layout/header.php';
     require ROOT . '/views/partials/header_service.php';
-    require $serviceFile;
+    require $servicePage;
     require ROOT . '/views/partials/notice_dataset.php';
     require ROOT . '/views/partials/segnalazioni.php';
     require ROOT . '/views/layout/footer.php';
@@ -436,11 +449,9 @@ if ($isServiceValid) {
 } 
 if ($isSheetValid) {
 
-    $sheetFile = ROOT . "/views/sheet/{$sheet}.php";
-
     require ROOT . '/views/layout/header.php';
     require ROOT . '/views/partials/header_service.php';
-    require $sheetFile;
+    require $servicePage;
     require ROOT . '/views/partials/notice_dataset.php';
     require ROOT . '/views/partials/segnalazioni_obj.php';
     require ROOT . '/views/layout/footer.php';
