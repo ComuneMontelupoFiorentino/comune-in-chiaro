@@ -200,6 +200,25 @@ header-block-brand {
 .it-header-center-wrapper .it-header-center-content-wrapper .it-brand-wrapper a {
   color: var(--bs-primary-custom);
 }
+#page-main {
+  position: relative; /* contesto per l'overlay assoluto */
+  min-height: 60vh;   /* evita che sia troppo basso mentre è vuoto */
+}
+
+.page-loader-overlay {
+  position: absolute;
+  inset: 0;            /* top/right/bottom/left: 0 */
+  z-index: 1000;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-loader-overlay:empty {
+  display: none;       /* quando JS lo svuota, sparisce e non blocca i click */
+}
+
 /* =====================================================================
    HERO
    ===================================================================== */
