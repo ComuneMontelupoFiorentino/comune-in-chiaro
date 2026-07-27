@@ -83,29 +83,38 @@
     <!-- Loader skeleton -->
     <script src="<?= BASE_URL ?>assets/dist/js/loader/loader.js?v=8" defer></script>
 
-    <!-- JS per main -->
     <?php if ($main === 'home') { ?>
+    <!-- JS per main -->
     <script src="<?= BASE_URL ?>assets/dist/js/loader/renderers.js?v=28" defer></script>
     <?php   }   ?>
 
-    <!-- carico js se è un servizio -->
     <?php if ($isServiceValid || $isSheetValid) { ?>
+    <!-- carico js se è un servizio -->
 
-        <script src="<?= BASE_URL ?>assets/dist/js/loader/service-renderer.js?v=27" defer></script>
+    <script src="<?= BASE_URL ?>assets/dist/js/loader/service-renderer.js?v=27" defer></script>
 
-        <?php if ($serviceAllowsEmbed) { ?> 
-            <script src="<?= BASE_URL ?>assets/dist/js/embed.js?v=1" defer></script>
+        <?php if ($isServiceValid) { ?>
+
+            <?php if ($serviceAllowsEmbed) { ?> 
+                <script src="<?= BASE_URL ?>assets/dist/js/services/services/embed.js?v=1" defer></script>
+            <?php } ?>
+
+        <?php   } else { ?>
+
+            <script src="<?= BASE_URL ?>assets/dist/js/services/sheets/copy-obj-id.js" defer></script> 
+
         <?php } ?>
         
     <?php   }   ?>
 
-    <!-- costum js per pagina -->
     <?php
-        $jsFile = ROOT . "/assets/dist/js/costum/custom-{$customJs}.js";
+
+        $jsFile = ROOT . "/assets/dist/js/services/{$folder}/{$folder}-{$customJs}.js";
 
         if (file_exists($jsFile)) {
     ?>
-    <script src="<?= BASE_URL ?>assets/dist/js/costum/custom-<?= htmlspecialchars($customJs) ?>.js?v=33"></script>
+    <!-- costum js per pagina -->
+    <script src="<?= BASE_URL ?>assets/dist/js/services/<?= htmlspecialchars($folder) ?>/<?= htmlspecialchars($folder) ?>-<?= htmlspecialchars($customJs) ?>.js?v=33"></script>
     <?php   }   ?>
 
 
