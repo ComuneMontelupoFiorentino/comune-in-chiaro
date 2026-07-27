@@ -318,6 +318,20 @@ svg filter feGaussianBlur {
     color-interpolation-filters: sRGB;
 }
 
+/* =====================================================================
+   CAROUSEL
+   ===================================================================== */
+.it-carousel-wrapper .splide__pagination button.is-active {
+     background: hsl(210.6, 32.9%, 28%);
+}
+.it-carousel-wrapper.it-carousel-landscape-abstract-three-cols-arrow-visible .splide__arrows .splide__arrow {
+     background: hsl(210.6, 32.9%, 28%);
+     border-radius: 50%;
+} 
+.it-carousel-wrapper .splide__track {
+     padding-top: 0px;
+}
+
 
 /* =====================================================================
    CARD & COMPONENTI
@@ -530,7 +544,17 @@ a.read-more {
 .callout .callout-title {
     margin-bottom: 0rem !important;
 }
+.according-sheet-costum {
+	color: hsl(210.6, 32.9%, 28%) !important;
+}  
 
+/* =====================================================================
+   TABLE
+   ===================================================================== */
+.table {
+    --bs-table-color: hsl(210.6, 32.9%, 28%);
+    font-family: "Roboto Mono",monospace;
+} 
 
 /* =====================================================================
    BLOCKQUOTE / RISULTATI / TESTATE
@@ -981,4 +1005,7 @@ mark.search-hl {
 .img-brand {
     width: 48px !important;
 } 
-
+.mw-locked {
+    opacity: .5;
+    cursor: not-allowed;
+}
