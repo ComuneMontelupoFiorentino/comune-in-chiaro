@@ -1,4 +1,5 @@
 
+<div id="spinnerLoadService" class="col-6 col-lg-3"></div>
 <section>
     <div class="container">
         <div class="row justify-content-center">
@@ -21,11 +22,9 @@
                     </nav>
                 </div><br>
                 <?php } ?>
-                <div id="spinnerLoadService" class="col-6 col-lg-3">
-                </div>
                 <h1 id="title-head-service">
-			<span class="visually-hidden">Titolo del servizio</span>
-		</h1>
+					<span class="visually-hidden">Titolo del servizio</span>
+				</h1>
                 <p id="subtitle-head-service"></p>
                 <div id="alertMessageService" class="alert" role="alert" style="display:none;">
                 </div>
