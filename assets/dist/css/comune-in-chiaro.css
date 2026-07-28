@@ -337,6 +337,14 @@ svg filter feGaussianBlur {
     color-interpolation-filters: sRGB;
 }
 
+.it-hero-wrapper .it-hero-text-wrapper p {
+  font-family: var(--bs-body-font-family) !important;
+}
+
+.py-4 {
+  padding-top: 0rem !important;
+}
+
 /* =====================================================================
    CAROUSEL
    ===================================================================== */
