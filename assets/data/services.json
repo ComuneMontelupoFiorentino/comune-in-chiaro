@@ -39,6 +39,11 @@
             {
                 "p": "Ecco un'altra riga.."
             }
-        ]
+        ],
+        "type": "service",
+        "lastUpdate": {
+            "alias": "plan",
+            "field": "generated_at"
+        }
     }
 ]
