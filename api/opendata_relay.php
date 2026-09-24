@@ -34,7 +34,7 @@ declare(strict_types=1);
 // Solo questi host sono inoltrabili: protezione anti-SSRF, non rimuovere
 // anche se il portale "resta inalterato" — protegge comunque da un uso
 // improprio del parametro "u" (es. per raggiungere host interni della rete).
-const ALLOWED_HOSTS = ['dati.toscana.it'];
+const ALLOWED_HOSTS = [''];
 
 const CONNECT_TIMEOUT = 8;   // secondi
 const TIMEOUT         = 15;  // secondi (totale)
