@@ -1,10 +1,10 @@
 /* =====================================================================
-   FOGLIO DI STILE — VERSIONE OTTIMIZZATA
-   • Selettori .icon duplicati (x3) uniti in uno solo
-   • Dichiarazione duplicata in .btn-primary rimossa
-   • Colori ripetuti (#a61c20, white, #ffffff, #fff) sostituiti con le
+   FOGLIO DI STILE â€” VERSIONE OTTIMIZZATA
+   â€¢ Selettori .icon duplicati (x3) uniti in uno solo
+   â€¢ Dichiarazione duplicata in .btn-primary rimossa
+   â€¢ Colori ripetuti (#a61c20, white, #ffffff, #fff) sostituiti con le
      variabili gia' presenti in :root
-   • Comportamento visivo IDENTICO all'originale
+   â€¢ Comportamento visivo IDENTICO all'originale
    ===================================================================== */
 
 :root {
@@ -34,6 +34,7 @@
     --bs-box-shadow-hover: 0 5px 15px rgba(0, 0, 0, 0.1);
     --bs-box-shadow-window: 0 20px 40px rgba(0, 0, 0, 0.4);
     --bs-border-card-custom: rgba(99, 99, 99, 0.2);
+
     --bs-border-white-alpha: rgba(255, 255, 255, .15);
 
     /* --- ANIMAZIONI & TRANSIZIONI --- */
@@ -82,7 +83,7 @@ blockquote {
     color: #00445f !important;
 }
 
-/* ICONE — i tre blocchi .icon dell'originale sono qui unificati.
+/* ICONE â€” i tre blocchi .icon dell'originale sono qui unificati.
    La cascata produceva: inline-flex + 32x32 + overflow visible. */
 .icon {
     display: inline-flex;
@@ -200,16 +201,22 @@ header-block-brand {
 .it-header-center-wrapper .it-header-center-content-wrapper .it-brand-wrapper a {
   color: var(--bs-primary-custom);
 }
+
+
 #page-main {
   position: relative; /* contesto per l'overlay assoluto */
   min-height: 60vh;   /* evita che sia troppo basso mentre è vuoto */
 }
 
 .page-loader-overlay {
-  position: absolute;
-  inset: 0;            /* top/right/bottom/left: 0 */
-  z-index: 1000;
+  position: fixed;        /* Garantisce la copertura rispetto alla finestra, non al genitore */
+  top: 0;
+  left: 0;
+  width: 100vw;           /* Oppure inset: 0 */
+  height: 100vh;
+  z-index: 9999;          /* Sopra a qualsiasi altro elemento della pagina */
   background: #fff;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -337,12 +344,17 @@ svg filter feGaussianBlur {
     color-interpolation-filters: sRGB;
 }
 
+
 .it-hero-wrapper .it-hero-text-wrapper p {
   font-family: var(--bs-body-font-family) !important;
 }
 
 .py-4 {
   padding-top: 0rem !important;
+}
+
+.it-hero-wrapper .it-hero-text-wrapper .it-category {
+  text-transform: none;
 }
 
 /* =====================================================================
@@ -359,6 +371,18 @@ svg filter feGaussianBlur {
      padding-top: 0px;
 }
 
+.px-4 {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.ul-carousel-costum {
+  font-size: 15px;
+}
+
+.h-100-costum {
+  min-width: 280px;
+}
 
 /* =====================================================================
    CARD & COMPONENTI
@@ -571,8 +595,9 @@ a.read-more {
 .callout .callout-title {
     margin-bottom: 0rem !important;
 }
+
 .according-sheet-costum {
-	color: hsl(210.6, 32.9%, 28%) !important;
+    color: hsl(210.6, 32.9%, 28%) !important;
 }  
 
 /* =====================================================================
@@ -582,6 +607,7 @@ a.read-more {
     --bs-table-color: hsl(210.6, 32.9%, 28%);
     font-family: "Roboto Mono",monospace;
 } 
+
 
 /* =====================================================================
    BLOCKQUOTE / RISULTATI / TESTATE
@@ -712,31 +738,43 @@ blockquote.blockquote-card,
 .fade-in-down-slow {
     opacity: 0;
     transform: translateY(-40px);
-    animation: fadeInDown 0.8s ease-out forwards; /* NB: keyframe fadeInDown non definito qui */
+    animation: fadeInDown 0.8s ease-out forwards;
 }
-
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 0.6s ease-out forwards;
 }
-
 .fade-in-right {
     opacity: 0;
     transform: translateX(50px);
     animation: fadeInRight 0.8s ease forwards;
 }
-
 .fade-in-left {
     opacity: 0;
     transform: translateX(-50px);
     animation: fadeInLeft 0.8s ease forwards;
 }
-
 .delay-1 { animation-delay: 0.1s; }
 .delay-2 { animation-delay: 0.2s; }
 .delay-3 { animation-delay: 0.3s; }
 .delay-4 { animation-delay: 0.4s; }
+
+/* ---- GATING per le pagine con service-renderer.js -----------------------
+   Se e' presente lo script, appena parte mette html.js-gate: qui sospendiamo
+   l'animazione finche' anche html.is-ready non arriva (a spinner nascosto).
+   Le pagine statiche non hanno mai .js-gate -> nessuna di queste regole si
+   applica -> comportamento originale, invariato. */
+html.js-gate .fade-in-down-slow,
+html.js-gate .fade-in,
+html.js-gate .fade-in-right,
+html.js-gate .fade-in-left {
+    animation: none;
+}
+html.js-gate.is-ready .fade-in-down-slow { animation: fadeInDown 0.8s ease-out forwards; }
+html.js-gate.is-ready .fade-in            { animation: fadeIn 0.6s ease-out forwards; }
+html.js-gate.is-ready .fade-in-right       { animation: fadeInRight 0.8s ease forwards; }
+html.js-gate.is-ready .fade-in-left        { animation: fadeInLeft 0.8s ease forwards; }
 
 @keyframes fadeIn {
     to { opacity: 1; transform: translateY(0); }
@@ -789,7 +827,6 @@ blockquote.blockquote-card,
     .it-header-navbar-wrapper {
         background-color: #fff;
         padding: 5px;
-		border-bottom: 1px solid rgba(128, 128, 128, 0.2);
     }
 
     .navbar .navbar-collapsable .navbar-nav li.nav-item a.nav-link,
@@ -1032,6 +1069,7 @@ mark.search-hl {
 .img-brand {
     width: 48px !important;
 } 
+
 .mw-locked {
     opacity: .5;
     cursor: not-allowed;
